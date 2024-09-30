@@ -13,7 +13,7 @@ pipeline {
             steps {
                script{
                    withDockerRegistry(credentialsId: '2969c022-3f74-4d87-a3c9-02cd3a2cfef9') {
-                    sh "docker build -t  todoapp:latest -f backened/Dockerfile . "
+                    sh "docker build -t  todoapp:latest -f backend/Dockerfile . "
                     sh "docker tag todoapp:latest keerthins123/todoapp:latest "
                  }
                }
