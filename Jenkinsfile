@@ -33,7 +33,7 @@ pipeline {
             steps {
                script{
                    withDockerRegistry(credentialsId: '2969c022-3f74-4d87-a3c9-02cd3a2cfef9') {
-                    sh "docker run -d --name to-do-app -p 4000:4000 keerthins123/todoapp:latest "
+                    sh "docker run -d -p 4000:4000 --name to-do-app keerthins123/todoapp:latest"
                  }
                }
             }
